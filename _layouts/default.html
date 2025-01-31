@@ -7,6 +7,8 @@
 
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -38,6 +40,64 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
         {% endif %}
+
+
+        <div>
+          {% if site.location %}
+          <div style="display: flex; flex-direction: row; padding-bottom:5px;">
+            <span><i class="fa-solid fa-location-dot fa-lg fa-fw"></i></span>
+            <span style="padding-left:10px; padding-top:2px;">{{ site.location }}</span>
+          </div>
+          {% endif %}
+
+          {% if site.profile_bluesky %}
+          <div style="display: flex; flex-direction: row; padding-bottom:5px;">
+            <a href="{{ site.profile_bluesky }}" target="_blank">
+              <span><i class="fa-brands fa-bluesky fa-lg fa-fw" style="color: #1889fe;"></i></span>
+              <span style="padding-left:5px;">Bluesky</span>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if site.profile_linkedin %}
+          <div style="display: flex; flex-direction: row; padding-bottom:5px;">
+            <a href="{{ site.profile_linkedin }}" target="_blank">
+              <span><i class="fab fa-linkedin fa-lg fa-fw" style="color: #086bc9;"></i></span>
+              <span style="padding-left:5px; padding-top:2px;">LinkedIn</span>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if site.profile_medium %}
+          <div style="display: flex; flex-direction: row; padding-bottom:5px;">
+            <a href="{{ site.profile_medium }}" target="_blank">
+              <span><i class="fa-brands fa-medium fa-lg fa-fw" style="color: #121413;"></i></span>
+              <span style="padding-left:5px; padding-top:2px;">Medium</span>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if site.profile_github %}
+          <div style="display: flex; flex-direction: row; padding-bottom:5px;">
+            <a href="{{ site.profile_github }}" target="_blank">
+            <span><i class="fab fa-github fa-lg fa-fw" style="color: #121413;"></i></span>
+            <span style="padding-left:5px; padding-top:2px;">GitHub</span>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if site.profile_google_scholar %}
+          <div style="display: flex; flex-direction: row; padding-bottom:5px;">
+            <a href="{{ site.profile_google_scholar }}" target="_blank">
+              <span><i class="fa-brands fa-google-scholar fa-lg fa-fw" style="color: #121413;"></i></span>
+             <span style="padding-left:5px; padding-top:2px;">Google Scholar</span>
+            </a>
+          </div>
+          {% endif %}
+
+        </div>
+
+
       </header>
       <section>
 
